@@ -39,10 +39,9 @@ helloGoodbye(); // should log: hello // should also log (after 3 seconds): good 
 
 function brokenRecord() {
   // ADD CODE HERE
-let myVar = setInterval(() =>  {
-    console.log("hi")
-},1000)
-clearInterval();
+setInterval(()=> {
+  console.log('hi')
+}, 1000)
 }
 
 // Uncomment the following line to check your work!
@@ -52,17 +51,29 @@ clearInterval();
 
 function limitedRepeat() {
   // ADD CODE HERE
+  let myVar = setInterval(() => {
+    console.log('Hi')
+  }, 1000)
+
+  setTimeout(() => {
+    clearInterval(myVar)
+  }, 5000)
 }
 // Uncomment the following line to check your work!
-// limitedRepeat(); // should log (every second, for 5 seconds): hi for now
+limitedRepeat(); // should log (every second, for 5 seconds): hi for now
 
 /* CHALLENGE 6 */
 
-function everyXsecsForYsecs() {
+function everyXsecsForYsecs(func, interval, duration) {
   // ADD CODE HERE
+  let myVar = setInterval(func, interval*1000);
+
+  setTimeout(() => {
+    clearInterval(myVar);
+  }, duration*1000);
 }
 // Uncomment the following lines to check your work!
-// function theEnd() {
-//   console.log('This is the end!');
-// }
-// everyXsecsForYsecs(theEnd, 2, 20); // should invoke theEnd function every 2 seconds, for 20 seconds): This is the end!
+function theEnd() {
+  console.log('This is the end!');
+}
+everyXsecsForYsecs(theEnd, 2, 20); // should invoke theEnd function every 2 seconds, for 20 seconds): This is the end!
