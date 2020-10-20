@@ -1,0 +1,17 @@
+button {
+    margin-top: 2rem;
+    color: black;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 2rem;
+}
+h2 {
+    font-size: 4rem;
+}
+
+#root {
+    text-align: center;
+    background-color: rgb(252, 159, 175);
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
