@@ -10,7 +10,8 @@ setTimeout(sayHello, 1000);
 console.log("Hey You!");
 ```
 
- output
+ // Hey You ! 
+ // after 1 sec - Hey You Called Me 
 
 2.
 ```js
@@ -22,7 +23,7 @@ setTimeout(sayHello, 0);
 
 console.log("Hey You!");
 ```
- output
+// Hey You! Hey You Called Me
 
 3.
 ```js
@@ -35,7 +36,7 @@ function main() {
 }
 main();
 ```
- output
+// A C B
 
 4.
 ```js
